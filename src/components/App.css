@@ -1,0 +1,101 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: red;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Grid Layout for Form Fields */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%; /* Ensures inputs cover full width of the column */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+
+button {
+    background-color: #007bff;
+    color:blue;
+    border: 1px solid #007bff; 
+    border-radius: 4px; 
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+}
+
+button:active {
+    background-color: #004080; 
+    border-color: #004080; 
+}
+
+button:disabled {
+
+    color:black; 
+    cursor: not-allowed; 
+}
+
