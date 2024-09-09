@@ -1,0 +1,246 @@
+package com.tsl.model;
+import java.time.LocalDateTime;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+
+@Entity
+public class CampaignCompanyDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	private String company_name;
+	private String address;
+	private String state_id;
+	private String city_id ;
+	private String website ;
+	private String boardline_number;
+	private Integer industry_vertical_id;
+	private Integer employee_size_id;
+	private Integer turnover_range_id;
+	private String server_brand ;
+	private String number_of_servers; 
+	private String storage_brand;
+	private String type_of_storage ;
+	private String backup_storage_brand;
+	private String erp ;
+	private String crm ;
+	private String hrms;
+	private String bi_reporting;
+	private String cloud ;
+	private String database_brand; 
+	private String endpoint;
+	@CreationTimestamp
+	@Column(name="createDate",updatable = false)
+	private LocalDateTime  created_at;
+	@UpdateTimestamp
+	@Column(name="updateDate",insertable = false)
+	private LocalDateTime updated_at;
+    @OneToOne(mappedBy = "company")
+    private CampaignContactDetails contactDetails;
+	public CampaignCompanyDetails(Integer id, String company_name, String address, String state_id, String city_id,
+			String website, String boardline_number, Integer industry_vertical_id, Integer employee_size_id,
+			Integer turnover_range_id, String server_brand, String number_of_servers, String storage_brand,
+			String type_of_storage, String backup_storage_brand, String erp, String crm, String hrms,
+			String bi_reporting, String cloud, String database_brand, String endpoint, LocalDateTime created_at,
+			LocalDateTime updated_at, CampaignContactDetails contactDetails) {
+		super();
+		this.id = id;
+		this.company_name = company_name;
+		this.address = address;
+		this.state_id = state_id;
+		this.city_id = city_id;
+		this.website = website;
+		this.boardline_number = boardline_number;
+		this.industry_vertical_id = industry_vertical_id;
+		this.employee_size_id = employee_size_id;
+		this.turnover_range_id = turnover_range_id;
+		this.server_brand = server_brand;
+		this.number_of_servers = number_of_servers;
+		this.storage_brand = storage_brand;
+		this.type_of_storage = type_of_storage;
+		this.backup_storage_brand = backup_storage_brand;
+		this.erp = erp;
+		this.crm = crm;
+		this.hrms = hrms;
+		this.bi_reporting = bi_reporting;
+		this.cloud = cloud;
+		this.database_brand = database_brand;
+		this.endpoint = endpoint;
+		this.created_at = created_at;
+		this.updated_at = updated_at;
+		this.contactDetails = contactDetails;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getCompany_name() {
+		return company_name;
+	}
+	public void setCompany_name(String company_name) {
+		this.company_name = company_name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getState_id() {
+		return state_id;
+	}
+	public void setState_id(String integer) {
+		this.state_id = integer;
+	}
+	public String getCity_id() {
+		return city_id;
+	}
+	public void setCity_id(String city_id) {
+		this.city_id = city_id;
+	}
+	public String getWebsite() {
+		return website;
+	}
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+	public String getBoardline_number() {
+		return boardline_number;
+	}
+	public void setBoardline_number(String boardline_number) {
+		this.boardline_number = boardline_number;
+	}
+	public Integer getIndustry_vertical_id() {
+		return industry_vertical_id;
+	}
+	public void setIndustry_vertical_id(Integer industry_vertical_id) {
+		this.industry_vertical_id = industry_vertical_id;
+	}
+	public Integer getEmployee_size_id() {
+		return employee_size_id;
+	}
+	public void setEmployee_size_id(Integer employee_size_id) {
+		this.employee_size_id = employee_size_id;
+	}
+	public Integer getTurnover_range_id() {
+		return turnover_range_id;
+	}
+	public void setTurnover_range_id(Integer turnover_range_id) {
+		this.turnover_range_id = turnover_range_id;
+	}
+	public String getServer_brand() {
+		return server_brand;
+	}
+	public void setServer_brand(String server_brand) {
+		this.server_brand = server_brand;
+	}
+	public String getNumber_of_servers() {
+		return number_of_servers;
+	}
+	public void setNumber_of_servers(String number_of_servers) {
+		this.number_of_servers = number_of_servers;
+	}
+	public String getStorage_brand() {
+		return storage_brand;
+	}
+	public void setStorage_brand(String storage_brand) {
+		this.storage_brand = storage_brand;
+	}
+	public String getType_of_storage() {
+		return type_of_storage;
+	}
+	public void setType_of_storage(String type_of_storage) {
+		this.type_of_storage = type_of_storage;
+	}
+	public String getBackup_storage_brand() {
+		return backup_storage_brand;
+	}
+	public void setBackup_storage_brand(String backup_storage_brand) {
+		this.backup_storage_brand = backup_storage_brand;
+	}
+	public String getErp() {
+		return erp;
+	}
+	public void setErp(String erp) {
+		this.erp = erp;
+	}
+	public String getCrm() {
+		return crm;
+	}
+	public void setCrm(String crm) {
+		this.crm = crm;
+	}
+	public String getHrms() {
+		return hrms;
+	}
+	public void setHrms(String hrms) {
+		this.hrms = hrms;
+	}
+	public String getBi_reporting() {
+		return bi_reporting;
+	}
+	public void setBi_reporting(String bi_reporting) {
+		this.bi_reporting = bi_reporting;
+	}
+	public String getCloud() {
+		return cloud;
+	}
+	public void setCloud(String cloud) {
+		this.cloud = cloud;
+	}
+	public String getDatabase_brand() {
+		return database_brand;
+	}
+	public void setDatabase_brand(String database_brand) {
+		this.database_brand = database_brand;
+	}
+	public String getEndpoint() {
+		return endpoint;
+	}
+	public void setEndpoint(String endpoint) {
+		this.endpoint = endpoint;
+	}
+	public LocalDateTime getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(LocalDateTime created_at) {
+		this.created_at = created_at;
+	}
+	public LocalDateTime getUpdated_at() {
+		return updated_at;
+	}
+	public void setUpdated_at(LocalDateTime updated_at) {
+		this.updated_at = updated_at;
+	}
+	public CampaignContactDetails getContactDetails() {
+		return contactDetails;
+	}
+	public void setContactDetails(CampaignContactDetails contactDetails) {
+		this.contactDetails = contactDetails;
+	}
+	@Override
+	public String toString() {
+		return "CampaignCompanyDetails [id=" + id + ", company_name=" + company_name + ", address=" + address
+				+ ", state_id=" + state_id + ", city_id=" + city_id + ", website=" + website + ", boardline_number="
+				+ boardline_number + ", industry_vertical_id=" + industry_vertical_id + ", employee_size_id="
+				+ employee_size_id + ", turnover_range_id=" + turnover_range_id + ", server_brand=" + server_brand
+				+ ", number_of_servers=" + number_of_servers + ", storage_brand=" + storage_brand + ", type_of_storage="
+				+ type_of_storage + ", backup_storage_brand=" + backup_storage_brand + ", erp=" + erp + ", crm=" + crm
+				+ ", hrms=" + hrms + ", bi_reporting=" + bi_reporting + ", cloud=" + cloud + ", database_brand="
+				+ database_brand + ", endpoint=" + endpoint + ", created_at=" + created_at + ", updated_at="
+				+ updated_at + ", contactDetails=" + contactDetails + "]";
+	}
+	public CampaignCompanyDetails() {
+		super();
+	}
+	
+	
+}
